@@ -1,0 +1,396 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.App-header {
+  background-color: #222;
+  color: rgb(207, 207, 207);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-menu {
+  position: absolute;
+  left: 0;
+  padding: 1em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.header-menu svg {
+  width: 32px;
+  fill: #008CBA;
+}
+
+.App-title {
+  font-size: 1.3em;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  margin: 1em;
+  display: inline-block;
+}
+
+.App-menubar {
+  min-height: 100vh;
+  background-color: rgb(43, 54, 63);
+}
+
+.App-map {
+  height: calc(100% - 4em);
+  position: fixed;
+  right: 0;
+  top: 4.5em;
+}
+
+
+/** Restaurant List **/
+
+.restaurant-filter {
+  position: fixed;
+  left: 0;
+  top: 4.5em;
+  width: 30%;
+}
+
+.restaurant-input {
+  width: 70%;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+}
+
+.restaurant-list {
+  list-style-type: none;
+  padding: 0;
+  margin: calc(4.5em + 44px) 0 0 0;
+}
+
+.restaurant-list li {
+  margin-top: -1px;
+  padding: 12px 30px;
+}
+
+.restaurant-list li:hover {
+  color: rgb(230, 230, 230);
+}
+
+.restaurant-list li a {
+  display:block;
+}
+
+.restaurant-list li button {
+  background-color: transparent;
+  border: none;
+  font-size: 12pt;
+  color: rgb(153, 152, 152);
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.restaurant-list li button:hover {
+  color: rgb(230, 230, 230);
+}
+
+.restaurant-button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 30%;
+  padding: 10px 0;
+}
+
+.restaurant-button .fa-filter {
+  padding-right: 5px;
+}
+
+/** Modal **/
+
+.modal {
+  width: 50%;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  min-height: 460px;
+  max-height: 700px;
+  background-color: #f3f3f3;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  background-color: rgba(40,40,40,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.modal .close-btn {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+  border: 0;
+  background: orange;
+  color: white;
+  padding: 5px 10px;
+  font-size: 10pt;
+  cursor: pointer;
+}
+
+
+.restaurant-details {
+  /* cover the modal */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* spacing as needed */
+  padding: 30px 20px;
+  /* let it scroll */
+  overflow: auto;
+}
+
+.restaurant-name {
+  color: #f18200;
+  font: 200 16pt Arial,sans-serif;
+  letter-spacing: 0;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.details-container {
+  overflow: hidden;
+  border-radius: 30px 0;
+  background-color: #fff;
+}
+
+.details-container p {
+  margin: 0 0 10px;
+}
+
+.details-header {
+  padding: 20px 20px 0;
+  background-color: #333;
+}
+
+.restaurant-cuisine {
+  color: #fff;
+  font-size: 12pt;
+}
+
+.restaurant-price {
+  color: #ddd;
+}
+
+.details-body {
+  padding: 15px 20px 20px;
+  text-align: left;
+}
+
+.details-body .fa {
+  padding-right: 5px;
+}
+
+.restaurant-rating {
+  text-transform: uppercase;
+  background: #fda900;
+  color: #fff;
+  border-radius: 3px;
+  padding: 3px 10px;
+  display: inline-block;
+}
+
+.restaurant-address {
+  font-size: 12pt;
+  margin: 10px 0px;
+  font-weight: 400;
+}
+
+.restaurant-phone {
+  font-size: 12pt;
+  margin: 10px 0px;
+  font-weight: 200;
+}
+
+.restaurant-hours {
+  color: #666;
+}
+
+.restaurant-hours td {
+  padding-right: 10px;
+}
+
+
+/** Info window **/
+
+.restaurant-info-window {
+  width: 200px;
+  min-height: 260px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 0 18px 16px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.restaurant-info {
+  margin-top: 16px;
+}
+
+.restaurant-info img{
+  width: 100%;
+  height: auto;
+}
+
+.restaurant-info h2 {
+  color: #f18200;
+  font: 200 11pt Arial,sans-serif;
+  letter-spacing: 0;
+  line-height: 1.3;
+  margin: 12px 0 10px;
+  text-transform: uppercase;
+}
+
+.restaurant-info p {
+  margin: 0;
+  font-size: 10pt;
+}
+
+.restaurant-info button {
+  background-color: orange;
+  border-bottom: 3px solid #eee;
+  color: #fff;
+  display: inline-block;
+  font-size: 10pt;
+  margin: 12px 0 0;
+  padding: 8px 15px 8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/** public components **/
+
+.loader {
+  border: 6px solid #b3b3b3cb;
+  border-top: 6px solid #6c757a;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-30px 0 0 -30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.alert {
+  margin-top: 16px;
+  padding: 2px 10px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 10pt;
+}
+
+.close-time-btn {
+  color: rgb(197, 197, 197);
+  font-size: 21px;
+  position: absolute;
+  right: 5px;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-time-btn:hover {
+  color: black;
+}
+
+
+/* ====================== Fluid Breakpoints ====================== */
+
+@media screen and (max-width: 960px) {
+  .modal {
+    width: 80%;
+    left: 10%;
+  }
+
+  .restaurant-list li {
+    padding: 12px 16px;
+  }
+
+  .restaurant-list li button {
+    font-size: 10.5pt;
+  }
+
+  .restaurant-input {
+    padding-left: 10px;
+  }
+
+  .restaurant-filter {
+    width: 258px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .modal {
+    width: 100%;
+    left: 0;
+    top: 10%;
+    min-height: 540px;
+  }
+
+  .restaurant-name {
+    text-align: left;
+    font-size: 14pt;
+  }
+
+  .restaurant-cuisine {
+    font-size: 10pt;
+  }
+
+  .restaurant-address,
+  .restaurant-phone {
+    font-size: 11pt;
+  }
+}
