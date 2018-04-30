@@ -1,7 +1,7 @@
 const API = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
 const Photo_URL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=160&photoreference="
 
-const Key= "AIzaSyAf6e7PbmHLvjOIoHmXDf09CR2ddaGh0Lg";
+const Key= "YourGoogleAPIKey";
 
 const headers = {
   'Accept': 'application/json'

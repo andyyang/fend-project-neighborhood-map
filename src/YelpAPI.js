@@ -3,7 +3,7 @@ const API = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3";
 const BusinessSearchURL = "/businesses/search";
 const BusinessDetailsURL = "/businesses/";
 
-const Secret = "8BTgKXFcGS9U3N2f61RU7AqctGPUc5LRkzpqxgH9r2Ibz_PLoaQ1gKTlwsgL2qpberoGfr9R8PlbIvSgehSoQQsAGa7DS-Q7mnZgp-AJJ1izSi3vDEJkMVw-YBjdWnYx";
+const Secret = "YourYelpAPIKey";
 
 const Headers = {
   'Accept': 'application/json',

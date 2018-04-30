@@ -16,7 +16,10 @@ This is a single page application featuring a map of Victoria restaurants. The f
 
 3. Install all project dependencies with `npm install`.
 
-4. Start the development server with `npm start`. The command will open a web browser to visit the application. You can look around to see what the experience looks like.
+4. Update `const Key` with your Google API key in GoogleAPI.js and `const Secret` with your Yelp API key in
+YelpAPI.js.
+
+5. Start the development server with `npm start`. The command will open a web browser to visit the application. You can look around to see what the experience looks like.
 
 ## Dependencies
 
