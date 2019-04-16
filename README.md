@@ -2,6 +2,8 @@
 
 This is a single page application featuring a map of Victoria restaurants. The functionality to this map includes highlighted restaurants and Yelp data about those restaurants. The project emphasizes using React to build the application and it also aceesses the Google Places API and the Yelp API to get the restaurant information as you interact with the aplication.
 
+[View Neighborhood Map](http://victoria-restaurants.s3-website.us-east-2.amazonaws.com/)
+
 ## Table of Contents
 
 * [Instructions](#instructions)
@@ -35,4 +37,4 @@ This project uses these tools, components, and frameworks:
 
 This project uses the place search function of [Google Places API](https://developers.google.com/places/web-service/search), the search function and the business details fuction of [Yelp Fusion API](https://www.yelp.com/developers/documentation/v3) to get the restaurant data.
 
-Because these APIs don't support CORS headers, the project uses [CORS Anywhere](https://cors-anywhere.herokuapp.com/) to access these APIs.
+Because these APIs don't support CORS headers, the project uses a proxy service based on AWS API Gateway and AWS Lambda to access these APIs. [CORS Anywhere](https://cors-anywhere.herokuapp.com/) is another option.

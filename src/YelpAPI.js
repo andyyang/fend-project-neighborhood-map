@@ -1,9 +1,9 @@
 
-const API = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3";
+const API = "https://6ws598moff.execute-api.us-east-2.amazonaws.com/prod/yelp"
 const BusinessSearchURL = "/businesses/search";
-const BusinessDetailsURL = "/businesses/";
+const BusinessDetailsURL = "/businesses";
 
-const Secret = "YourYelpAPIKey";
+const Key = "YourProxyKey";
 
 const Headers = {
   'Accept': 'application/json',
@@ -18,7 +18,7 @@ export const getYelpInfo = (url) =>
   fetch(url, {
     headers: {
       ...Headers,
-      'Authorization': `Bearer ${Secret}`
+      'x-api-key': Key
     }}).then(res => res.json());
 
 /**

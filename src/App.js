@@ -10,7 +10,7 @@ import * as YelpAPI from './YelpAPI';
 import './App.css';
 
 const isLargeScreen = () => window.matchMedia('(min-width: 760px)').matches;
-const GoogleMapURL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places';
+const GoogleMapURL = 'https://maps.googleapis.com/maps/api/js?key=YourGoogleKey&v=3.exp&libraries=geometry,drawing,places';
 
 class App extends Component {
   state = {
@@ -140,7 +140,7 @@ class App extends Component {
         width: '30%',
         display: showingMenubar ? 'block' : 'none',
 
-        '@media (max-width: 960px)': {
+        '@media (maxWidth: 960px)': {
           width: '258px'
         }
       },
